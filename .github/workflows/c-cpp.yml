@@ -17,5 +17,13 @@ jobs:
       run: gcc project.c
     - name: make project.c
       run: make project.c
-    - name: run
-      run: ./a.out
+  deploy:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+
+    steps:
+      - name: Deploy executable file
+        run: |
+          ssh root@<your-server> cp tic-tac-toe /usr/local/bin
+          ssh root@<your-server> chmod +x /usr/local/bin/tic-tac-toe
