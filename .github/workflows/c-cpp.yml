@@ -13,8 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: configure
-      run: gcc project.c
     - name: make project.c
       run: make project.c
   deploy:
@@ -24,4 +22,6 @@ jobs:
 
     steps:
       - name: Deploy executable file
+        run: gcc project.c 
+      - name: Run
         run: ./a.out
