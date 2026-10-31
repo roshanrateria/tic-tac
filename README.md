@@ -1,17 +1,11 @@
 # tic-tac
 
-## Overview
-
-Computer Project
+A small C implementation of a two-player, 3x3 tic-tac-toe game. The board state and turn handling are implemented in `project.c`.
 
 ## Technology
 
-C
+- C
 
-## Repository contents
+## Run
 
-`project.c`
-
-## Notes
-
-This README documents the repository using metadata and files visible in the repository. See the source tree for the current implementation.
+Compile `project.c` with a C compiler, then run the resulting executable.
